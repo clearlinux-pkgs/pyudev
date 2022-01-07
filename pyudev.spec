@@ -4,7 +4,7 @@
 #
 Name     : pyudev
 Version  : 0.22
-Release  : 36
+Release  : 37
 URL      : https://github.com/pyudev/pyudev/archive/v0.22/pyudev-0.22.tar.gz
 Source0  : https://github.com/pyudev/pyudev/archive/v0.22/pyudev-0.22.tar.gz
 Summary  : A libudev binding
@@ -13,24 +13,19 @@ License  : LGPL-2.1
 Requires: pyudev-license = %{version}-%{release}
 Requires: pyudev-python = %{version}-%{release}
 Requires: pyudev-python3 = %{version}-%{release}
-Requires: Sphinx
-Requires: docutils
-Requires: hypothesis
-Requires: pylint
-Requires: python-mock
-Requires: six
-BuildRequires : Sphinx
 BuildRequires : buildreq-distutils3
-BuildRequires : docutils
-BuildRequires : hypothesis
-BuildRequires : pluggy
-BuildRequires : py-python
-BuildRequires : pylint
-BuildRequires : pytest
-BuildRequires : python-mock
-BuildRequires : six
-BuildRequires : tox
-BuildRequires : virtualenv
+BuildRequires : pypi(docutils)
+BuildRequires : pypi(hypothesis)
+BuildRequires : pypi(mock)
+BuildRequires : pypi(pluggy)
+BuildRequires : pypi(py)
+BuildRequires : pypi(pylint)
+BuildRequires : pypi(pytest)
+BuildRequires : pypi(six)
+BuildRequires : pypi(sphinx)
+BuildRequires : pypi(tox)
+BuildRequires : pypi(virtualenv)
+BuildRequires : pypi(yapf)
 
 %description
 ######
@@ -61,7 +56,13 @@ Summary: python3 components for the pyudev package.
 Group: Default
 Requires: python3-core
 Provides: pypi(pyudev)
+Requires: pypi(docutils)
+Requires: pypi(hypothesis)
+Requires: pypi(mock)
+Requires: pypi(pylint)
 Requires: pypi(six)
+Requires: pypi(sphinx)
+Requires: pypi(yapf)
 
 %description python3
 python3 components for the pyudev package.
@@ -76,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1611951275
+export SOURCE_DATE_EPOCH=1641593921
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
