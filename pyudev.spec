@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pyudev
-Version  : 0.24.0
-Release  : 41
-URL      : https://github.com/pyudev/pyudev/archive/v0.24.0/pyudev-0.24.0.tar.gz
-Source0  : https://github.com/pyudev/pyudev/archive/v0.24.0/pyudev-0.24.0.tar.gz
+Version  : 0.24.1
+Release  : 42
+URL      : https://github.com/pyudev/pyudev/archive/v0.24.1/pyudev-0.24.1.tar.gz
+Source0  : https://github.com/pyudev/pyudev/archive/v0.24.1/pyudev-0.24.1.tar.gz
 Summary  : A libudev binding
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -54,10 +54,10 @@ python3 components for the pyudev package.
 
 
 %prep
-%setup -q -n pyudev-0.24.0
-cd %{_builddir}/pyudev-0.24.0
+%setup -q -n pyudev-0.24.1
+cd %{_builddir}/pyudev-0.24.1
 pushd ..
-cp -a pyudev-0.24.0 buildavx2
+cp -a pyudev-0.24.1 buildavx2
 popd
 
 %build
@@ -65,7 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1695930393
+export SOURCE_DATE_EPOCH=1695938979
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
