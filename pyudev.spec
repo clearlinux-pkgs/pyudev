@@ -5,7 +5,7 @@
 #
 Name     : pyudev
 Version  : 0.24.1
-Release  : 42
+Release  : 43
 URL      : https://github.com/pyudev/pyudev/archive/v0.24.1/pyudev-0.24.1.tar.gz
 Source0  : https://github.com/pyudev/pyudev/archive/v0.24.1/pyudev-0.24.1.tar.gz
 Summary  : A libudev binding
